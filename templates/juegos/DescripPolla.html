@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+ 
+{% block link%} 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
+
+ {%endblock %}
+
+ 
+
+{% block content %}
+{% csrf_token %}
+
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header text-uppercase text-center bg-dark text-light"> Descripción de Polla</div>
+            <div class="card-body">
+              <h4>La polla es un juego que te permite apostar a tu equipo ganador o apostar por un empate.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#" class="btn btn-primary btn-lg">Comenzar</a>
+            <!-- <a href="" class="btn btn-primary btn-lg" href="" target="" data-toggle="">Comenzar</a>  -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}

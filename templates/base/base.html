@@ -1,0 +1,60 @@
+{% load staticfiles %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+	<!--Agregando-->
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	
+
+{% block link%}  {%endblock %}
+
+	<title>{% block title%} Rusia2018SW2 {%endblock %}</title>
+ <!--Agregamdo -->
+ <!-- Font Awesome -->
+
+
+  <style>
+{% block style%}  {%endblock %}
+       input {
+       	 width: 40%;
+       }
+
+      .intro-2 {
+          background: url("https://pbs.twimg.com/profile_background_images/626100471086850049/8WBVDw0m.jpg")no-repeat center center;
+          background-size: cover;
+      }
+
+      
+  </style>
+
+</head>
+<body class="container intro-2">
+
+	{% block header%}
+
+	{%endblock %}
+
+	{% block content %}
+
+	<h4>Este es el contenido del archivo base</h4>
+
+	{% endblock %}
+
+
+	{% block footer%}
+
+
+	{%endblock %}
+
+	<!--Agregando-->
+ 
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{% block script%}  {%endblock %}
+</body>
+</html>

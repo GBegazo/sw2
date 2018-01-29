@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+ 
+{% block link%} 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
+
+ {%endblock %}
+
+ 
+
+{% block content %}
+{% csrf_token %}
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header text-uppercase text-center bg-dark text-light"> Descripción de Equipo Ideal</div>
+            <div class="card-body">
+              <h4>El equipo ideal es un juego que te permite armar tu equipo con los jugadores que conformarían el once ideal de todo el mundo.</h4>
+              <h4>Intrucciones:</h4>
+              <h4>1. Elige la formación.</h4>
+              <h4>2. Selecciona la poscición del jugador.</h4>
+              <h4>3. Selecciona el país de tu jugadror.</h4>
+              <h4>4. Selecciona tu jugador.</h4>
+              <h4>5. Guarda tu equipo ideal!</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#" class="btn btn-primary btn-lg">Comenzar</a>
+            <!-- <a href="" class="btn btn-primary btn-lg" href="" target="" data-toggle="">Comenzar</a>  -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

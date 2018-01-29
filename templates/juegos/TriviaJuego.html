@@ -1,0 +1,125 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block link%} 
+
+
+ <link rel="stylesheet" href="{% static 'css/triviajuegocss.css' %}">
+<link rel="stylesheet" href="{% static 'css/temporizador.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+ {%endblock %}
+
+
+{% block content %}
+  {% csrf_token %}
+
+<div class="container">
+  <h2 style="text-align: center" class="well">Progreso de preguntas completadas:</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%" id="progresopreg">
+      0%
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="w3-container" style="margin-left: 45%">
+        <div class="w3-card-4 w3-blue-grey" style="width:50%">
+            <div class="w3-container w3-center">
+                <h1>Puntos</h1>
+                <div class="w3-section">
+                    <h3 id="puntos">0 pts</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="w3-container">
+        
+
+        <div class="progresss blue">
+                <span class="progress-left">
+                    <span id ="aux1" class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span id = "aux2" class="progress-bar"></span>
+                </span>
+                <div  id="temporizador" class="progress-value">1</div>
+            </div>
+
+    </div>
+  </div>
+
+</div>
+<br>
+
+ <div class="container-fluid bg-info">
+    <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+          <!--Aqui van la preguntas-->
+            <h3 id="pregunta" ><span class="label label-warning" id="qid">1</span> ¿Qué director técnico ha logrado alzarse con la Copa del Mundo en más de una ocasión?</h3>
+        </div>
+        <div class="modal-body">
+            <div class="col-xs-3 col-xs-offset-5">
+               <div id="loadbar" style="display: none;">
+                  <div class="blockG" id="rotateG_01"></div>
+                  <div class="blockG" id="rotateG_02"></div>
+                  <div class="blockG" id="rotateG_03"></div>
+                  <div class="blockG" id="rotateG_04"></div>
+                  <div class="blockG" id="rotateG_05"></div>
+                  <div class="blockG" id="rotateG_06"></div>
+                  <div class="blockG" id="rotateG_07"></div>
+                  <div class="blockG" id="rotateG_08"></div>
+              </div>
+          </div>
+
+          <div class="quiz" id="quiz" data-toggle="buttons">
+            <!--Aqui van las respuestas-->
+           <label id="p1" class="foc element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right">
+            
+           </i></span> <input type="radio"  name="q_answer" value="0">Luiz Felipe Scolari</label>
+
+           <label id="p2" class="foc element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right">
+            
+           </i></span> <input type="radio"  name="q_answer" value="1">Vittorio Pozzo</label>
+
+           <label id="p3" class="foc element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right">
+            
+           </i></span> <input type="radio"  name="q_answer" value="2">Marcello Lippi</label>
+
+           <label id="p4" class="foc element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right">
+           
+           </i></span> <input type="radio" name="q_answer" value="3">Franz Beckenbauer</label>
+
+       </div>
+   </div>
+   <div class="modal-footer text-muted">
+    <span id="answer"></span>
+</div>
+</div>
+</div>
+</div>
+
+
+ 
+  {% endblock %}
+  {% block script%}
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="{% static 'js/triviajuegojs.js' %}" ></script>
+
+
+
+  {%endblock %}
