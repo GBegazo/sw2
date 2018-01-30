@@ -5,7 +5,7 @@ $(document).ready(function () {
     var rel = [];
     var docs2 = [""];
     //Remplazar el 127.0.0.1 por el link publico
-    var url = "https://mundialrusiasw2.herokuapp.com/api/trivia";
+    var url = "https://apuestaperusia.herokuapp.com/api/trivia";
     // var url = "http://127.0.0.1:8000/api/trivia"
     var jqxhr = $.get(url, function () {
         console.log("enviado");
