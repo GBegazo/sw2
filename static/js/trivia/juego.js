@@ -78,7 +78,8 @@ $(function () {
         console.log("Estas en la pregunta : " + now);
         if (now > cantPreguntas) {
             localStorage.setItem("puntos", JSON.stringify(auxpuntos));
-            window.location.href = "http://127.0.0.1:8000/juegosmundial/trivia/final";
+            window.location.href = "https://mundialrusiasw2.herokuapp.com/juegosmundial/trivia/final";
+            //window.location.href = "http://127.0.0.1:8000/juegosmundial/trivia/final";
         } else {
             ancho = ancho + (100 / cantPreguntas);
             document.getElementById("progresopreg").style.width = ancho + "%";
@@ -89,7 +90,8 @@ $(function () {
                 $("#answer").html($(this).checking(choice));
                 setTimeout(function () {
                     localStorage.setItem("puntos", JSON.stringify(auxpuntos));
-                    window.location.href = "http://127.0.0.1:8000/juegosmundial/trivia/final";
+                    window.location.href = "https://mundialrusiasw2.herokuapp.com/juegosmundial/trivia/final";
+                    //window.location.href = "http://127.0.0.1:8000/juegosmundial/trivia/final";
                 }, 1500);
             } else {
                 var choice;
