@@ -26,6 +26,6 @@ urlpatterns = [
     path('juegosmundial/', include ('app.juegosmundial.urls',namespace = 'juegosmundial')),
     url(r'^usuario/', include('app.usuario.urls', namespace='usuario')),
     url(r'^$', login,{'template_name':'usuario/index.html'},name='login'),
-    url(r'^api/trivia', views.ejemploList.as_view()),
+    url(r'^api/trivia', views.triviaList.as_view()),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

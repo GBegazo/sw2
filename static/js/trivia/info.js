@@ -48,6 +48,7 @@ $(document).ready(function () {
             }
             console.log(docs2);
             localStorage.setItem("docs", JSON.stringify(docs2));
+            $('#jugar').removeClass("invisible");
         });
 
     

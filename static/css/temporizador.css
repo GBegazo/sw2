@@ -25,9 +25,6 @@
     top: 0;
     z-index: 1;
 }
-.progresss .progress-left{
-    left: 0;
-}
 .progresss .progress-bar{
     width: 100%;
     height: 100%;
@@ -37,8 +34,14 @@
     position: absolute;
     top: 0;
 }
+.progresss .progress-left{
+    left: 0;
+}
 
 
+.progresss.blue .progress-left .progress-bar{
+    animation: loading-1 7.5s linear forwards 7.5s;
+}
 .progresss .progress-left .progress-bar{
     left: 100%;
     border-top-right-radius: 80px;
@@ -59,7 +62,7 @@
     border-right: 0;
     -webkit-transform-origin: center right;
     transform-origin: center right;
-    animation: loading-1 75s linear forwards;
+    animation: loading-1 7.5s linear forwards;
 }
 
 
@@ -81,9 +84,7 @@
 }
 
 
-.progresss.blue .progress-left .progress-bar{
-    animation: loading-1 75s linear forwards 75s;
-}
+
 
 
 
